@@ -1,0 +1,123 @@
+body {
+    padding : 0px;
+}
+canvas {
+    margin : 0px;
+    width : 100%;
+    height : 400px;
+    position : absolute;
+    top : 0px;
+    right : 0px;
+    z-index : -1;
+}
+
+/* GUI Styles */
+button {
+    background : linear-gradient(#BABABA, #787878);
+    border : 1px solid #191919;
+    border-radius : 4px;
+    outline : none;
+    color : black;
+    margin-bottom : 10px;
+}
+button.selected {
+    color : white;
+    border : 1px solid #191919;
+    background : linear-gradient(#646464, #868686);
+}
+button.radio {
+    text-align : left;
+    background : linear-gradient(#6A6A6A,#464646);
+    color : white;
+    margin : 0px;
+    padding : 1px 1px 1px 10px;
+    width : 100%;
+    border-radius : 0px;
+    display : inline;
+}
+button.radio.selected {
+    color : black;
+    background : linear-gradient(#4670B2,#6690D2);
+}
+button.radio:first-child {
+    border-radius : 5px 5px 0px 0px;
+}
+button.radio:last-child {
+    border-radius : 0px 0px 5px 5px;
+    margin-bottom : 10px;
+}
+button.radio.inline {
+    width : inherit;
+    display : inlne;
+    padding : 0 5px 0 5px;
+    text-align : center;
+}
+button.radio.inline:first-child {
+    border-radius : 5px 0 0 5px;
+}
+button.radio.inline:last-child {
+    border-radius : 0 5px 5px 0;
+}
+div.toolbar {
+    background-color: #727272;
+    padding : 5px;
+    margin: 0px 10px 10px 0px;
+    width : 25%;
+}
+div div.toolbar {
+    border-top : 2px groove #999;
+    width : 92%;
+}
+
+/* Checkbox style credit to https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    border-radius : 2px;
+    background-color: #464646;
+}
+.checkbox input:checked ~ .checkmark {
+    background-color: #464646;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox input:checked ~ span {
+    color: white;
+}
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox .checkmark:after {
+    left: 30%;
+    bottom: 25%;
+    width: 30%;
+    height: 80%;
+    border: solid rgba(255,255,255,0.8);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
